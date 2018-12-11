@@ -13,6 +13,24 @@ spring:
       max-active: 20
       test-on-borrow: true
       driver-class-name: com.mysql.cj.jdbc.Driver
+  # common web
+  thymeleaf:
+    cache: false # 开发时关闭缓存,不然没法看到实时页面
+    mode: LEGACYHTML5 # 用非严格的 HTML
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+
+feign:
+  hystrix:
+    enabled: true
+
+# common service
+mybatis:
+  configuration:
+    cache-enabled: true
+  type-aliases-package: org.caps.microservice.common.domain
+  mapper-locations: classpath:mapper/*.xml
 
 server:
   port: 8503
