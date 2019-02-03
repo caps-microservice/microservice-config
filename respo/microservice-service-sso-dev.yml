@@ -33,7 +33,7 @@ mybatis:
   mapper-locations: classpath:mapper/*.xml
 
 server:
-  port: 850390
+  port: 8503
 
 eureka:
   client:
